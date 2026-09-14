@@ -1,0 +1,1996 @@
+[
+ {
+  "id": "loop",
+  "tipo": "personagem",
+  "nome": "Loop",
+  "subtitulo": "Ervilha Curiosa",
+  "faccao": "ervilha",
+  "nivel": 0,
+  "imagem": "pea_loop_nivel_0_logo_official_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe as 3 primeiras cartas do baralho. Devolva-as na mesma ordem.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 3,
+     "mode": "keep_order"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Compre 1 carta.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 1,
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Todo mistério começa com uma pergunta. E Loop sempre tem várias."
+ },
+ {
+  "id": "nibs",
+  "tipo": "personagem",
+  "nome": "Nibs",
+  "subtitulo": "Ervilha Atenta",
+  "faccao": "ervilha",
+  "nivel": 0,
+  "imagem": "pea_nibs_nivel_0_logo_official_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe a carta do topo do baralho.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 1,
+     "mode": "keep_order"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe 1 carta aleatória da mão do adversário.",
+   "acoes": [
+    {
+     "a": "look_random_hand_card",
+     "target": "opponent"
+    }
+   ]
+  },
+  "flavor": "Quem observa primeiro, erra por último."
+ },
+ {
+  "id": "lupi",
+  "tipo": "personagem",
+  "nome": "Lupi",
+  "subtitulo": "A Mensageira",
+  "faccao": "ervilha",
+  "nivel": 0,
+  "imagem": "pea_lupi_ervilha_nivel_0_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Mostre sua mão ao adversário. Compre 2 cartas.",
+   "acoes": [
+    {
+     "a": "reveal_hand",
+     "target": "self"
+    },
+    {
+     "a": "draw",
+     "qty": 2,
+     "target": "self"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário mostra quantas cartas possui na mão.",
+   "acoes": [
+    {
+     "a": "reveal_hand_count",
+     "target": "opponent"
+    }
+   ]
+  },
+  "flavor": "Uma mensagem nunca chega sozinha."
+ },
+ {
+  "id": "pepito",
+  "tipo": "personagem",
+  "nome": "Pepito",
+  "subtitulo": "O Sortudo",
+  "faccao": "ervilha",
+  "nivel": 0,
+  "imagem": "pea_pepito_ervilha_nivel_0_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Compre 2 cartas e depois coloque 1 carta da sua mão no fundo do baralho.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 2,
+     "target": "self"
+    },
+    {
+     "a": "choose_from_hand_to_deck_bottom",
+     "qty": 1,
+     "target": "self"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Escolha 1 carta da sua mão e troque-a pela carta do topo do baralho.",
+   "acoes": [
+    {
+     "a": "trade_hand_card_for_topdeck",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Pepito chama isso de sorte. Os outros chamam de acaso."
+ },
+ {
+  "id": "pipo",
+  "tipo": "personagem",
+  "nome": "Pipo",
+  "subtitulo": "O Catador",
+  "faccao": "ervilha",
+  "nivel": 0,
+  "imagem": "pea_pipo_ervilha_nivel_0_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Pegue 1 carta aleatória do descarte para sua mão.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_random",
+     "qty": 1,
+     "destination": "hand",
+     "target": "self"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Coloque 1 carta da sua mão no fundo do baralho e compre 1 carta.",
+   "acoes": [
+    {
+     "a": "choose_from_hand_to_deck_bottom",
+     "qty": 1,
+     "target": "self"
+    },
+    {
+     "a": "draw",
+     "qty": 1,
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Para Pipo, todo descarte esconde um tesouro."
+ },
+ {
+  "id": "teco",
+  "tipo": "personagem",
+  "nome": "Teco",
+  "subtitulo": "O Espertinho",
+  "faccao": "ervilha",
+  "nivel": 0,
+  "imagem": "pea_teco_ervilha_nivel_0_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Compre 1 carta.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 1,
+     "target": "self"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe as 2 primeiras cartas do baralho e devolva-as na ordem que quiser.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 2,
+     "mode": "reorder"
+    }
+   ]
+  },
+  "flavor": "Teco sempre alcança uma carta a mais."
+ },
+ {
+  "id": "krum",
+  "tipo": "personagem",
+  "nome": "Krum",
+  "subtitulo": "O Escondido",
+  "faccao": "caos",
+  "nivel": 0,
+  "imagem": "pea_krum_caos_nivel_0_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe a carta do topo do baralho. Você pode colocá-la no descarte.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 1,
+     "mode": "choose_discard_or_keep"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe as 2 primeiras cartas do baralho.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 2,
+     "mode": "keep_order"
+    }
+   ]
+  },
+  "flavor": "Se você viu Krum, ele deixou."
+ },
+ {
+  "id": "brix",
+  "tipo": "personagem",
+  "nome": "Brix",
+  "subtitulo": "O Ladrão",
+  "faccao": "caos",
+  "nivel": 0,
+  "imagem": "pea_brix_caos_nivel_0_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Troque 1 carta aleatória da sua mão por 1 carta aleatória da mão do adversário.",
+   "acoes": [
+    {
+     "a": "swap_hand_random",
+     "qty": 1
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário descarta 1 carta escolhida por você.",
+   "acoes": [
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 1,
+     "chooser": "self"
+    }
+   ]
+  },
+  "flavor": "Brix nunca pega a carta errada."
+ },
+ {
+  "id": "grik",
+  "tipo": "personagem",
+  "nome": "Grik",
+  "subtitulo": "O Mexedor",
+  "faccao": "caos",
+  "nivel": 0,
+  "imagem": "pea_grik_caos_nivel_0_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe as 2 primeiras cartas do baralho e troque a ordem delas.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 2,
+     "mode": "reorder"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário descarta 1 carta aleatória.",
+   "acoes": [
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 1,
+     "chooser": "random"
+    }
+   ]
+  },
+  "flavor": "Grik nunca deixa nada como estava."
+ },
+ {
+  "id": "morga",
+  "tipo": "personagem",
+  "nome": "Morga",
+  "subtitulo": "A Fuxiqueira",
+  "faccao": "caos",
+  "nivel": 0,
+  "imagem": "pea_morga_caos_nivel_0_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe 1 carta aleatória da mão do adversário.",
+   "acoes": [
+    {
+     "a": "look_random_hand_card",
+     "target": "opponent"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário mostra sua mão.",
+   "acoes": [
+    {
+     "a": "reveal_hand",
+     "target": "opponent"
+    }
+   ]
+  },
+  "flavor": "Morga sempre sabe um pouco mais do que deveria."
+ },
+ {
+  "id": "rask",
+  "tipo": "personagem",
+  "nome": "Rask",
+  "subtitulo": "O Catador",
+  "faccao": "caos",
+  "nivel": 0,
+  "imagem": "pea_rask_caos_nivel_0_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Escolha 1 carta do descarte e coloque-a no topo do baralho.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_choice",
+     "qty": 1,
+     "destination": "deck_top",
+     "target": "self"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Pegue 1 carta aleatória do descarte para sua mão.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_random",
+     "qty": 1,
+     "destination": "hand",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Nada se perde. Tudo pode voltar."
+ },
+ {
+  "id": "vexa",
+  "tipo": "personagem",
+  "nome": "Vexa",
+  "subtitulo": "A Confusão",
+  "faccao": "caos",
+  "nivel": 0,
+  "imagem": "pea_vexa_caos_nivel_0.png",
+  "invocar": {
+   "texto": "Remova a carta de Nível 0 da Linha de Evolução do adversário.",
+   "acoes": [
+    {
+     "a": "remove_evolution_level",
+     "target": "opponent",
+     "level": 0,
+     "destination": "discard",
+     "note": "destino assumido = descarte (não especificado na carta); só remove se for o topo da posição"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Escolha uma carta de Nível 1 da Linha de Evolução do adversário e coloque-a no fundo do Baralho em vez de colocá-la no Descarte.",
+   "acoes": [
+    {
+     "a": "remove_evolution_level",
+     "target": "opponent",
+     "level": 1,
+     "destination": "deck_bottom"
+    }
+   ]
+  },
+  "flavor": "Depois de Vexa, ninguém sabe onde está nada."
+ },
+ {
+  "id": "bino",
+  "tipo": "personagem",
+  "nome": "Bino",
+  "subtitulo": "O Escavador",
+  "faccao": "ervilha",
+  "nivel": 1,
+  "imagem": "pea_bino_ervilha_nivel_1_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Pegue 1 carta do descarte e coloque-a na sua mão.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_choice",
+     "qty": 1,
+     "destination": "hand",
+     "target": "self"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Escolha 1 carta do descarte e coloque-a no fundo do baralho.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_choice",
+     "qty": 1,
+     "destination": "deck_bottom",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Bino escava até encontrar o que procura."
+ },
+ {
+  "id": "dudu",
+  "tipo": "personagem",
+  "nome": "Dudu",
+  "subtitulo": "O Observador",
+  "faccao": "ervilha",
+  "nivel": 1,
+  "imagem": "pea_dudu_ervilha_nivel_1_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe as 2 primeiras cartas do baralho. Pode colocar uma delas no descarte e devolver a outra ao topo.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 2,
+     "mode": "discard_one_keep_one_top"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe a carta do topo do baralho.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 1,
+     "mode": "keep_order"
+    }
+   ]
+  },
+  "flavor": "Dudu sempre olha mais uma vez."
+ },
+ {
+  "id": "kiko",
+  "tipo": "personagem",
+  "nome": "Kiko",
+  "subtitulo": "O Protetor",
+  "faccao": "ervilha",
+  "nivel": 1,
+  "imagem": "pea_kiko_ervilha_nivel_1.png",
+  "invocar": {
+   "texto": "Remova a carta de Nível 1 da Linha de Evolução do adversário e coloque-a no Descarte.",
+   "acoes": [
+    {
+     "a": "remove_evolution_level",
+     "target": "opponent",
+     "level": 1,
+     "destination": "discard"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário não pode invocar uma carta de Nível 2 no próximo turno.",
+   "acoes": [
+    {
+     "a": "block_invoke_level",
+     "target": "opponent",
+     "level": 2,
+     "duration": "opponent_next_turn"
+    }
+   ]
+  },
+  "flavor": "Kiko fica entre você e o perigo."
+ },
+ {
+  "id": "lilo",
+  "tipo": "personagem",
+  "nome": "Lilo",
+  "subtitulo": "A Troca-Troca",
+  "faccao": "ervilha",
+  "nivel": 1,
+  "imagem": "pea_lilo_ervilha_nivel_1_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Troque 1 carta da sua mão por 1 carta aleatória da mão do adversário.",
+   "acoes": [
+    {
+     "a": "swap_hand_choice_for_random",
+     "qty": 1
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Cada jogador compra 1 carta.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 1,
+     "target": "self"
+    },
+    {
+     "a": "draw",
+     "qty": 1,
+     "target": "opponent"
+    }
+   ]
+  },
+  "flavor": "Lilo sempre traz uma surpresa na troca."
+ },
+ {
+  "id": "milo",
+  "tipo": "personagem",
+  "nome": "Milo",
+  "subtitulo": "O Inventor",
+  "faccao": "ervilha",
+  "nivel": 1,
+  "imagem": "pea_milo_ervilha_nivel_1_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe as 4 primeiras cartas do baralho. Pegue 1 e devolva as outras ao topo na ordem que quiser.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 4,
+     "mode": "take_one_reorder_rest"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Compre 1 carta.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 1,
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Milo sempre encontra uma solução que ainda não existia."
+ },
+ {
+  "id": "tutu",
+  "tipo": "personagem",
+  "nome": "Tutu",
+  "subtitulo": "A Escoteira",
+  "faccao": "ervilha",
+  "nivel": 1,
+  "imagem": "pea_tutu_ervilha_nivel_1_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe a mão do adversário.",
+   "acoes": [
+    {
+     "a": "reveal_hand",
+     "target": "opponent",
+     "viewer_only": true
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe as 3 primeiras cartas do baralho e reorganize-as.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 3,
+     "mode": "reorder"
+    }
+   ]
+  },
+  "flavor": "Tutu observa antes de dar o próximo passo."
+ },
+ {
+  "id": "ladran",
+  "tipo": "personagem",
+  "nome": "Ladran",
+  "subtitulo": "A Lagarta Ladra",
+  "faccao": "caos",
+  "nivel": 1,
+  "imagem": "pea_ladran_caos_nivel_1_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Escolha 1 carta da mão do adversário. Ela vai para o fundo do baralho.",
+   "acoes": [
+    {
+     "a": "choose_from_hand_to_deck_bottom",
+     "qty": 1,
+     "target": "opponent",
+     "chooser": "self"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário descarta 1 carta aleatória.",
+   "acoes": [
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 1,
+     "chooser": "random"
+    }
+   ]
+  },
+  "flavor": "Se não está na mão, já está perdido."
+ },
+ {
+  "id": "mekk",
+  "tipo": "personagem",
+  "nome": "Mekk",
+  "subtitulo": "O Corvo Manipulador",
+  "faccao": "caos",
+  "nivel": 1,
+  "imagem": "pea_mekk_caos_nivel_1_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Escolha 1 carta do topo da Evolução do adversário e coloque-a no descarte.",
+   "acoes": [
+    {
+     "a": "remove_evolution_top",
+     "target": "opponent",
+     "destination": "discard",
+     "chooser": "self"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe a mão do adversário e escolha 1 carta. Ela vai para o fundo do baralho.",
+   "acoes": [
+    {
+     "a": "choose_from_hand_to_deck_bottom",
+     "qty": 1,
+     "target": "opponent",
+     "chooser": "self",
+     "reveal_first": true
+    }
+   ]
+  },
+  "flavor": "Mekk puxa os fios antes que alguém perceba."
+ },
+ {
+  "id": "milted",
+  "tipo": "personagem",
+  "nome": "Milted",
+  "subtitulo": "O Caracol Bloqueador",
+  "faccao": "caos",
+  "nivel": 1,
+  "imagem": "pea_milted_caos_nivel_1.png",
+  "invocar": {
+   "texto": "Remova a carta de Nível 2 da Linha de Evolução do adversário e coloque-a no Descarte.",
+   "acoes": [
+    {
+     "a": "remove_evolution_level",
+     "target": "opponent",
+     "level": 2,
+     "destination": "discard"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Escolha uma carta de Nível 1 da Linha de Evolução do adversário e devolva-a para a mão dele.",
+   "acoes": [
+    {
+     "a": "remove_evolution_level",
+     "target": "opponent",
+     "level": 1,
+     "destination": "opponent_hand"
+    }
+   ]
+  },
+  "flavor": "Milted não corre. Milted bloqueia."
+ },
+ {
+  "id": "runa",
+  "tipo": "personagem",
+  "nome": "Runa",
+  "subtitulo": "A Aranha de Fios",
+  "faccao": "caos",
+  "nivel": 1,
+  "imagem": "pea_runa_caos_nivel_1_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Escolha 1 carta da Evolução do adversário. Ela não pode ser protegida por efeitos até o início do próximo turno dele.",
+   "acoes": [
+    {
+     "a": "suppress_protection",
+     "target": "opponent",
+     "scope": "choice",
+     "duration": "opponent_next_turn"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário não pode reorganizar o baralho neste turno.",
+   "acoes": [
+    {
+     "a": "block_reorganize_deck",
+     "target": "opponent",
+     "duration": "this_turn"
+    }
+   ]
+  },
+  "flavor": "Uma linha bem colocada muda todo o caminho."
+ },
+ {
+  "id": "vulto",
+  "tipo": "personagem",
+  "nome": "Vulto",
+  "subtitulo": "O Escorregadio",
+  "faccao": "caos",
+  "nivel": 1,
+  "imagem": "pea_vulto_caos_nivel_1_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Retire a carta do topo da Evolução do adversário e coloque-a na mão dele.",
+   "acoes": [
+    {
+     "a": "remove_evolution_top",
+     "target": "opponent",
+     "destination": "opponent_hand"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Compre 1 carta.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 1,
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Quando você pisca, Vulto já passou."
+ },
+ {
+  "id": "zark",
+  "tipo": "personagem",
+  "nome": "Zark",
+  "subtitulo": "O Roedor",
+  "faccao": "caos",
+  "nivel": 1,
+  "imagem": "pea_zark_caos_nivel_1_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "O adversário descarta 1 carta e compra 1.",
+   "acoes": [
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 1,
+     "chooser": "opponent"
+    },
+    {
+     "a": "draw",
+     "qty": 1,
+     "target": "opponent"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe as 3 primeiras cartas do baralho e descarte 1 delas.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 3,
+     "mode": "discard_one_rest_stay"
+    }
+   ]
+  },
+  "flavor": "Zark mastiga planos e deixa só o caos."
+ },
+ {
+  "id": "fifi",
+  "tipo": "personagem",
+  "nome": "Fifi",
+  "subtitulo": "A Investigadora",
+  "faccao": "ervilha",
+  "nivel": 2,
+  "imagem": "pea_fifi_ervilha_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe a mão do adversário e escolha 1 carta. O adversário coloca essa carta no topo do baralho.",
+   "acoes": [
+    {
+     "a": "choose_from_hand_to_deck_top",
+     "qty": 1,
+     "target": "opponent",
+     "chooser": "self",
+     "reveal_first": true
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe as 3 primeiras cartas do baralho.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 3,
+     "mode": "keep_order"
+    }
+   ]
+  },
+  "flavor": "Fifi pergunta pouco. Fifi descobre muito."
+ },
+ {
+  "id": "joca",
+  "tipo": "personagem",
+  "nome": "Joca",
+  "subtitulo": "O Improvisador",
+  "faccao": "ervilha",
+  "nivel": 2,
+  "imagem": "pea_joca_ervilha_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Escolha uma carta da sua mão e troque-a pela carta do topo do baralho.",
+   "acoes": [
+    {
+     "a": "trade_hand_card_for_topdeck",
+     "target": "self"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Pegue uma carta aleatória do descarte para sua mão.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_random",
+     "qty": 1,
+     "destination": "hand",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Joca sempre tem um plano B. E um plano C."
+ },
+ {
+  "id": "luma",
+  "tipo": "personagem",
+  "nome": "Luma",
+  "subtitulo": "A Guardiã do Broto",
+  "faccao": "ervilha",
+  "nivel": 2,
+  "imagem": "pea_luma_ervilha_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Até seu próximo turno, a primeira carta da sua Evolução que seria removida por um efeito permanece no lugar.",
+   "acoes": [
+    {
+     "a": "protect_evolution_first_removal",
+     "target": "self",
+     "duration": "own_next_turn"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Compre 1 carta e depois descarte 1 carta.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 1,
+     "target": "self"
+    },
+    {
+     "a": "discard_forced",
+     "target": "self",
+     "qty": 1,
+     "chooser": "self"
+    }
+   ]
+  },
+  "flavor": "Luma protege o futuro antes que ele floresça."
+ },
+ {
+  "id": "neco",
+  "tipo": "personagem",
+  "nome": "Neco",
+  "subtitulo": "O Estrategista",
+  "faccao": "ervilha",
+  "nivel": 2,
+  "imagem": "pea_neco_ervilha_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe as 5 primeiras cartas do baralho e reorganize-as.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 5,
+     "mode": "reorder"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Compre 2 cartas.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 2,
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Neco sempre pensa cinco movimentos à frente."
+ },
+ {
+  "id": "tico",
+  "tipo": "personagem",
+  "nome": "Tico",
+  "subtitulo": "O Resgatador",
+  "faccao": "ervilha",
+  "nivel": 2,
+  "imagem": "pea_tico_ervilha_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Retire 1 carta do topo da Evolução do adversário e coloque-a na mão dele.",
+   "acoes": [
+    {
+     "a": "remove_evolution_top",
+     "target": "opponent",
+     "destination": "opponent_hand"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Recupere 1 carta do descarte.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_choice",
+     "qty": 1,
+     "destination": "hand",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Tico desmonta o problema só o bastante para ajudar."
+ },
+ {
+  "id": "zuzu",
+  "tipo": "personagem",
+  "nome": "Zuzu",
+  "subtitulo": "A Guardiã",
+  "faccao": "ervilha",
+  "nivel": 2,
+  "imagem": "pea_zuzu_ervilha_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Escolha uma carta da sua Evolução. Ela fica protegida contra efeitos até o início do seu próximo turno.",
+   "acoes": [
+    {
+     "a": "protect_evolution_choice",
+     "target": "self",
+     "qty": 1,
+     "duration": "own_next_turn"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Recupere 1 carta do descarte.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_choice",
+     "qty": 1,
+     "destination": "hand",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Zuzu não deixa ninguém tocar no que protege."
+ },
+ {
+  "id": "grumo",
+  "tipo": "personagem",
+  "nome": "Grumo",
+  "subtitulo": "O Engolidor",
+  "faccao": "caos",
+  "nivel": 2,
+  "imagem": "pea_grumo_caos_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "O adversário escolhe 1 carta da própria mão e coloca no descarte.",
+   "acoes": [
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 1,
+     "chooser": "opponent"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Escolha 1 carta do descarte e remove-a do jogo.",
+   "acoes": [
+    {
+     "a": "exile_from_discard",
+     "qty": 1,
+     "chooser": "self"
+    }
+   ]
+  },
+  "flavor": "Grumo não devolve o que engole."
+ },
+ {
+  "id": "kroll",
+  "tipo": "personagem",
+  "nome": "Kroll",
+  "subtitulo": "O Quebra-Evoluções",
+  "faccao": "caos",
+  "nivel": 2,
+  "imagem": "pea_kroll_caos_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Remove a carta do topo da Evolução do adversário e coloque-a no descarte. Se ela tiver nível 2 ou 3, o adversário compra 1 carta.",
+   "acoes": [
+    {
+     "a": "remove_evolution_top",
+     "target": "opponent",
+     "destination": "discard",
+     "bonus_draw_if_level_gte": 2
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário descarta 1 carta.",
+   "acoes": [
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 1,
+     "chooser": "opponent"
+    }
+   ]
+  },
+  "flavor": "Kroll desmonta o que parecia impossível."
+ },
+ {
+  "id": "mordak",
+  "tipo": "personagem",
+  "nome": "Mordak",
+  "subtitulo": "O Devastador",
+  "faccao": "caos",
+  "nivel": 2,
+  "imagem": "pea_mordak_caos_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Remove a carta do topo da Evolução do adversário e coloque-a no descarte.",
+   "acoes": [
+    {
+     "a": "remove_evolution_top",
+     "target": "opponent",
+     "destination": "discard"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário descarta 1 carta aleatória.",
+   "acoes": [
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 1,
+     "chooser": "random"
+    }
+   ]
+  },
+  "flavor": "Mordak sempre começa pelo topo."
+ },
+ {
+  "id": "nyx",
+  "tipo": "personagem",
+  "nome": "Nyx",
+  "subtitulo": "A Marionetista",
+  "faccao": "caos",
+  "nivel": 2,
+  "imagem": "pea_nyx_caos_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Escolha 1 carta da mão do adversário e coloque-a no topo do baralho.",
+   "acoes": [
+    {
+     "a": "choose_from_hand_to_deck_top",
+     "qty": 1,
+     "target": "opponent",
+     "chooser": "self"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe as 4 primeiras cartas do baralho e reorganize-as.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 4,
+     "mode": "reorder"
+    }
+   ]
+  },
+  "flavor": "Nyx move as cartas sem tocar nelas."
+ },
+ {
+  "id": "sombra",
+  "tipo": "personagem",
+  "nome": "Sombra",
+  "subtitulo": "A Espreitadora",
+  "faccao": "caos",
+  "nivel": 2,
+  "imagem": "pea_sombra_caos_nivel_2_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe a mão do adversário. Escolha 1 carta e coloque-a no topo do baralho.",
+   "acoes": [
+    {
+     "a": "choose_from_hand_to_deck_top",
+     "qty": 1,
+     "target": "opponent",
+     "chooser": "self",
+     "reveal_first": true
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe as 5 primeiras cartas do baralho e descarte 1.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 5,
+     "mode": "discard_one_rest_stay"
+    }
+   ]
+  },
+  "flavor": "Sombra aparece onde ninguém está olhando."
+ },
+ {
+  "id": "vark",
+  "tipo": "personagem",
+  "nome": "Vark",
+  "subtitulo": "O Corrompedor",
+  "faccao": "caos",
+  "nivel": 2,
+  "imagem": "pea_vark_caos_nivel_2.png",
+  "invocar": {
+   "texto": "Escolha uma carta de Nível 0 ou 1 da Linha de Evolução do adversário e coloque-a no fundo do Baralho.",
+   "acoes": [
+    {
+     "a": "remove_evolution_choice_levels",
+     "target": "opponent",
+     "levels": [
+      0,
+      1
+     ],
+     "destination": "deck_bottom"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário deve escolher uma carta de sua Linha de Evolução e colocá-la no Descarte.",
+   "acoes": [
+    {
+     "a": "remove_evolution_self_choice",
+     "target": "opponent",
+     "destination": "discard"
+    }
+   ]
+  },
+  "flavor": "Vark sabe onde a proteção termina."
+ },
+ {
+  "id": "atlas",
+  "tipo": "personagem",
+  "nome": "Atlas",
+  "subtitulo": "O Guardião",
+  "faccao": "ervilha",
+  "nivel": 3,
+  "imagem": "pea_atlas_ervilha_nivel_3_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Proteja toda a sua Evolução contra efeitos até o início do seu próximo turno.",
+   "acoes": [
+    {
+     "a": "protect_evolution_all",
+     "target": "self",
+     "duration": "own_next_turn"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Escolha 1 carta da sua mão. Ela não pode ser descartada por efeitos até o início do seu próximo turno.",
+   "acoes": [
+    {
+     "a": "protect_hand_card_from_discard",
+     "target": "self",
+     "qty": 1,
+     "duration": "own_next_turn"
+    }
+   ]
+  },
+  "flavor": "Atlas permanece de pé enquanto o mundo se reorganiza."
+ },
+ {
+  "id": "luna",
+  "tipo": "personagem",
+  "nome": "Luna",
+  "subtitulo": "A Visionária",
+  "faccao": "ervilha",
+  "nivel": 3,
+  "imagem": "pea_luna_ervilha_nivel_3_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe as 5 primeiras cartas do baralho e reorganize-as como quiser.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 5,
+     "mode": "reorder"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe a mão do adversário.",
+   "acoes": [
+    {
+     "a": "reveal_hand",
+     "target": "opponent",
+     "viewer_only": true
+    }
+   ]
+  },
+  "flavor": "Luna enxerga caminhos onde ninguém mais vê."
+ },
+ {
+  "id": "max",
+  "tipo": "personagem",
+  "nome": "Max",
+  "subtitulo": "O Último Recurso",
+  "faccao": "ervilha",
+  "nivel": 3,
+  "imagem": "pea_max_ervilha_nivel_3_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Se você tiver menos cartas na mão que o adversário, compre 2 cartas. Caso contrário, compre 1.",
+   "acoes": [
+    {
+     "a": "conditional_draw_by_handsize",
+     "less_qty": 2,
+     "else_qty": 1
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Recupere 1 carta do descarte.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_choice",
+     "qty": 1,
+     "destination": "hand",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Max guarda sua melhor jogada para o último instante."
+ },
+ {
+  "id": "nino",
+  "tipo": "personagem",
+  "nome": "Nino",
+  "subtitulo": "O Resgateiro",
+  "faccao": "ervilha",
+  "nivel": 3,
+  "imagem": "pea_nino_ervilha_nivel_3_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Recupere até 2 cartas do descarte para sua mão.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_choice",
+     "qty": 2,
+     "destination": "hand",
+     "target": "self",
+     "upto": true
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe as 3 primeiras cartas do baralho.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 3,
+     "mode": "keep_order"
+    }
+   ]
+  },
+  "flavor": "Nino sempre encontra uma segunda chance."
+ },
+ {
+  "id": "pea",
+  "tipo": "personagem",
+  "nome": "Pea",
+  "subtitulo": "A Última Esperança",
+  "faccao": "ervilha",
+  "nivel": 3,
+  "imagem": "pea_pea_ervilha_nivel_3_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Escolha até 2 cartas da sua Evolução e proteja-as contra efeitos até o início do seu próximo turno.",
+   "acoes": [
+    {
+     "a": "protect_evolution_choice",
+     "target": "self",
+     "qty": 2,
+     "upto": true,
+     "duration": "own_next_turn"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Compre 2 cartas e depois descarte 1.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 2,
+     "target": "self"
+    },
+    {
+     "a": "discard_forced",
+     "target": "self",
+     "qty": 1,
+     "chooser": "self"
+    }
+   ]
+  },
+  "flavor": "Enquanto houver uma ervilha, ainda há esperança."
+ },
+ {
+  "id": "verde",
+  "tipo": "personagem",
+  "nome": "Verde",
+  "subtitulo": "O Capitão",
+  "faccao": "ervilha",
+  "nivel": 3,
+  "imagem": "pea_verde_ervilha_nivel_3_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe as 5 primeiras cartas do baralho. Pegue até 2 cartas e coloque o restante no fundo do baralho em qualquer ordem.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 5,
+     "mode": "take_upto_n_rest_bottom",
+     "n": 2
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Compre 2 cartas.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 2,
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Quando Verde aponta o caminho, todos avançam."
+ },
+ {
+  "id": "drak",
+  "tipo": "personagem",
+  "nome": "Drak",
+  "subtitulo": "O Devorador",
+  "faccao": "caos",
+  "nivel": 3,
+  "imagem": "pea_drak_caos_nivel_3.png",
+  "invocar": {
+   "texto": "Se o adversário possuir uma carta de Nível 2, remova-a da Linha de Evolução e coloque-a no Descarte.",
+   "acoes": [
+    {
+     "a": "remove_evolution_level",
+     "target": "opponent",
+     "level": 2,
+     "destination": "discard",
+     "conditional_exists": true
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Escolha uma carta de Nível 0, 1 ou 2 da Linha de Evolução do adversário e coloque-a no fundo do Baralho.",
+   "acoes": [
+    {
+     "a": "remove_evolution_choice_levels",
+     "target": "opponent",
+     "levels": [
+      0,
+      1,
+      2
+     ],
+     "destination": "deck_bottom"
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "kron",
+  "tipo": "personagem",
+  "nome": "Kron",
+  "subtitulo": "O Quebra-Reinos",
+  "faccao": "caos",
+  "nivel": 3,
+  "imagem": "pea_kron_caos_nivel_3.png",
+  "invocar": {
+   "texto": "Escolha uma carta de Nível 1 da Linha de Evolução do adversário e coloque-a na sua mão.",
+   "acoes": [
+    {
+     "a": "remove_evolution_level",
+     "target": "opponent",
+     "level": 1,
+     "destination": "self_hand"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Escolha uma carta de Nível 0 ou 1 da sua Linha de Evolução e coloque-a no fundo do Baralho.",
+   "acoes": [
+    {
+     "a": "remove_evolution_choice_levels",
+     "target": "self",
+     "levels": [
+      0,
+      1
+     ],
+     "destination": "deck_bottom"
+    }
+   ]
+  },
+  "flavor": "Kron não quebra apenas torres. Quebra certezas."
+ },
+ {
+  "id": "malka",
+  "tipo": "personagem",
+  "nome": "Malka",
+  "subtitulo": "A Rainha das Sombras",
+  "faccao": "caos",
+  "nivel": 3,
+  "imagem": "pea_malka_caos_nivel_3_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe a mão do adversário e escolha até 2 cartas. Coloque-as no fundo do baralho.",
+   "acoes": [
+    {
+     "a": "choose_from_hand_to_deck_bottom",
+     "qty": 2,
+     "upto": true,
+     "target": "opponent",
+     "chooser": "self",
+     "reveal_first": true
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário compra 1 carta e depois descarta 2.",
+   "acoes": [
+    {
+     "a": "draw",
+     "qty": 1,
+     "target": "opponent"
+    },
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 2,
+     "chooser": "opponent"
+    }
+   ]
+  },
+  "flavor": "Malka transforma cada sombra em uma escolha."
+ },
+ {
+  "id": "nemesis",
+  "tipo": "personagem",
+  "nome": "Nêmesis",
+  "subtitulo": "O Último Caos",
+  "faccao": "caos",
+  "nivel": 3,
+  "imagem": "pea_nemesis_caos_nivel_3_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Remova a carta do topo da Evolução do adversário. Depois, ele descarta 1 carta.",
+   "acoes": [
+    {
+     "a": "remove_evolution_top",
+     "target": "opponent",
+     "destination": "discard"
+    },
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 1,
+     "chooser": "opponent"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "Olhe as 5 primeiras cartas do baralho e escolha 1 para colocar no descarte.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 5,
+     "mode": "discard_one_rest_stay"
+    }
+   ]
+  },
+  "flavor": "Quando Nêmesis chega, até a esperança precisa se esconder."
+ },
+ {
+  "id": "onix",
+  "tipo": "personagem",
+  "nome": "Ônix",
+  "subtitulo": "O Senhor do Caos",
+  "faccao": "caos",
+  "nivel": 3,
+  "imagem": "pea_onix_caos_nivel_3_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Remove a carta do topo da Evolução do adversário e coloque-a no descarte.",
+   "acoes": [
+    {
+     "a": "remove_evolution_top",
+     "target": "opponent",
+     "destination": "discard"
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário descarta 2 cartas.",
+   "acoes": [
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 2,
+     "chooser": "opponent"
+    }
+   ]
+  },
+  "flavor": "Quando Ônix chega, o topo nunca permanece."
+ },
+ {
+  "id": "veyra",
+  "tipo": "personagem",
+  "nome": "Veyra",
+  "subtitulo": "A Tecelã do Caos",
+  "faccao": "caos",
+  "nivel": 3,
+  "imagem": "pea_veyra_caos_nivel_3_63x88mm_300dpi.png",
+  "invocar": {
+   "texto": "Olhe as 5 primeiras cartas do baralho. Escolha 2 para colocar no descarte e devolva as outras ao topo na ordem que quiser.",
+   "acoes": [
+    {
+     "a": "look_top",
+     "qty": 5,
+     "mode": "discard_n_reorder_rest",
+     "n": 2
+    }
+   ]
+  },
+  "descartar": {
+   "texto": "O adversário descarta 1 carta aleatória.",
+   "acoes": [
+    {
+     "a": "discard_forced",
+     "target": "opponent",
+     "qty": 1,
+     "chooser": "random"
+    }
+   ]
+  },
+  "flavor": "Veyra tece possibilidades até sobrar apenas o caos."
+ },
+ {
+  "id": "barreira_de_emergencia",
+  "tipo": "ativacao_rapida",
+  "nome": "Barreira de Emergência",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_01_barreira_de_emergencia.png",
+  "efeito": {
+   "texto": "Quando uma carta da sua Linha de Evolução for alvo de um efeito, CANCELE esse efeito.",
+   "acoes": [
+    {
+     "a": "cancel_effect_targeting_evolution",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": "Nem todo ataque do Caos encontra brecha no jardim."
+ },
+ {
+  "id": "desvio",
+  "tipo": "ativacao_rapida",
+  "nome": "Desvio",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_02_desvio.png",
+  "efeito": {
+   "texto": "Quando o adversário escolher uma carta sua como alvo de um efeito, você pode fazer com que outro alvo válido seja escolhido em seu lugar.",
+   "acoes": [
+    {
+     "a": "redirect_target",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "bloqueio",
+  "tipo": "ativacao_rapida",
+  "nome": "Bloqueio",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_03_bloqueio.png",
+  "efeito": {
+   "texto": "Quando o adversário for realizar uma Invocação, cancele a Invocação. A carta retorna para a mão do jogador.",
+   "acoes": [
+    {
+     "a": "cancel_invocation",
+     "target": "opponent"
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "recomeco",
+  "tipo": "ativacao_rapida",
+  "nome": "Recomeço",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_04_recomeco.png",
+  "efeito": {
+   "texto": "Quando uma carta da sua Linha de Evolução for removida, retorne-a para sua mão em vez de colocá-la no Descarte.",
+   "acoes": [
+    {
+     "a": "redirect_removal_to_hand",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "segunda_chance",
+  "tipo": "ativacao_rapida",
+  "nome": "Segunda Chance",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_05_segunda_chance.png",
+  "efeito": {
+   "texto": "Depois de realizar seu descarte obrigatório, não ative o Efeito de Descarte da carta. Em vez disso, compre 1 carta.",
+   "acoes": [
+    {
+     "a": "replace_discard_effect_with_draw",
+     "target": "self",
+     "qty": 1
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "revelacao",
+  "tipo": "ativacao_rapida",
+  "nome": "Revelação",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_06_revelacao.png",
+  "efeito": {
+   "texto": "Quando o adversário comprar uma carta, olhe essa carta antes que ela seja adicionada à mão dele.",
+   "acoes": [
+    {
+     "a": "peek_opponent_draw",
+     "target": "opponent"
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "troca_rapida",
+  "tipo": "ativacao_rapida",
+  "nome": "Troca Rápida",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_07_troca_rapida.png",
+  "efeito": {
+   "texto": "Troque uma carta da sua mão por uma carta aleatória da mão do adversário.",
+   "acoes": [
+    {
+     "a": "swap_hand_choice_for_random",
+     "qty": 1
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "limpeza",
+  "tipo": "ativacao_rapida",
+  "nome": "Limpeza",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_08_limpeza.png",
+  "efeito": {
+   "texto": "Escolha até 2 cartas do Descarte e coloque-as no fundo do Baralho, em qualquer ordem.",
+   "acoes": [
+    {
+     "a": "retrieve_discard_choice",
+     "qty": 2,
+     "upto": true,
+     "destination": "deck_bottom",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "ultimo_golpe",
+  "tipo": "ativacao_rapida",
+  "nome": "Último Golpe",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_09_ultimo_golpe.png",
+  "efeito": {
+   "texto": "Escolha uma carta de Nível 0, 1 ou 2 da Linha de Evolução do adversário. Coloque-a no fundo do Baralho.",
+   "acoes": [
+    {
+     "a": "remove_evolution_choice_levels",
+     "target": "opponent",
+     "levels": [
+      0,
+      1,
+      2
+     ],
+     "destination": "deck_bottom"
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "coringa",
+  "tipo": "item",
+  "nome": "Coringa",
+  "faccao": "ervilha",
+  "timing": "efeito",
+  "imagem": "ativacao_10_coringa.png",
+  "efeito": {
+   "texto": "Escolha 1 carta que esteja em jogo, na mão de qualquer jogador ou na Pilha de Descarte. Coloque essa carta na sua mão.",
+   "acoes": [
+    {
+     "a": "take_any_card_from_hand_or_discard",
+     "target": "self"
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "interrupcao",
+  "tipo": "ativacao_rapida",
+  "nome": "Interrupção",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_11_interrupcao.png",
+  "efeito": {
+   "texto": "Quando o adversário ativar uma carta de Ativação Rápida, cancele o efeito dela.",
+   "acoes": [
+    {
+     "a": "cancel_quick_activation",
+     "target": "opponent"
+    }
+   ]
+  },
+  "flavor": ""
+ },
+ {
+  "id": "curioso",
+  "tipo": "ativacao_rapida",
+  "nome": "Curioso",
+  "faccao": "ervilha",
+  "timing": "resposta",
+  "imagem": "ativacao_12_curioso.png",
+  "efeito": {
+   "texto": "Quando o adversário comprar uma carta, olhe essa carta antes que ela seja adicionada à mão dele.",
+   "acoes": [
+    {
+     "a": "peek_opponent_draw",
+     "target": "opponent"
+    }
+   ]
+  },
+  "flavor": "Informação imediata sem mexer diretamente na mão."
+ },
+ {
+  "id": "arco_iris",
+  "tipo": "fenomeno",
+  "nome": "Arco-Íris",
+  "faccao": "neutro",
+  "imagem": "fenomeno_arco_iris_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Enquanto Arco-Íris estiver ativo, nenhum jogador pode invocar cartas do Caos.",
+   "acoes": [
+    {
+     "a": "passive_block_invoke_faction",
+     "faccao": "caos"
+    }
+   ]
+  }
+ },
+ {
+  "id": "caos_total",
+  "tipo": "fenomeno",
+  "nome": "Caos Total",
+  "faccao": "neutro",
+  "imagem": "fenomeno_caos_total_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Uma vez por turno, um jogador pode descartar 3 cartas da mão para remover a carta do topo da Evolução de um adversário. A carta removida vai para o descarte sem ativar seu efeito de Descarte.",
+   "acoes": [
+    {
+     "a": "passive_optional_action",
+     "cost": {
+      "discard_self": 3
+     },
+     "effect": {
+      "a": "remove_evolution_top",
+      "target": "opponent",
+      "destination": "discard",
+      "suppress_discard_effect": true
+     },
+     "frequency": "once_per_turn_per_player"
+    }
+   ]
+  }
+ },
+ {
+  "id": "chuvisco",
+  "tipo": "fenomeno",
+  "nome": "Chuvisco",
+  "faccao": "neutro",
+  "imagem": "fenomeno_chuvisco_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Sempre que um jogador invocar uma Ervilha, ele pode olhar a carta do topo do baralho e devolvê-la ao topo.",
+   "acoes": [
+    {
+     "a": "passive_trigger_on_invoke",
+     "faccao": "ervilha",
+     "effect": {
+      "a": "look_top",
+      "qty": 1,
+      "mode": "keep_order"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "dias_de_sol",
+  "tipo": "fenomeno",
+  "nome": "Dias de Sol",
+  "faccao": "neutro",
+  "imagem": "fenomeno_dias_de_sol_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Enquanto Dias de Sol estiver ativo, cada jogador pode realizar até 2 Invocações durante seu turno.",
+   "acoes": [
+    {
+     "a": "passive_modify_limit",
+     "limit": "invocacoes_por_turno",
+     "valor": 2
+    }
+   ]
+  }
+ },
+ {
+  "id": "ferramentas_de_jardinagem",
+  "tipo": "fenomeno",
+  "nome": "Ferramentas de Jardinagem",
+  "faccao": "neutro",
+  "imagem": "fenomeno_ferramentas_de_jardinagem_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Uma vez por turno, cada jogador pode descartar a carta que acabou de comprar e comprar uma nova carta. A carta descartada não ativa seu efeito de descarte.",
+   "acoes": [
+    {
+     "a": "passive_optional_action",
+     "effect": {
+      "a": "mulligan_last_draw"
+     },
+     "frequency": "once_per_turn_per_player"
+    }
+   ]
+  }
+ },
+ {
+  "id": "nuvem_de_fertilizante",
+  "tipo": "fenomeno",
+  "nome": "Nuvem de Fertilizante",
+  "faccao": "neutro",
+  "imagem": "fenomeno_nuvem_de_fertilizante_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Sempre que um jogador substituir uma carta por outra do mesmo nível, ele pode olhar as 2 primeiras cartas do baralho, adicionar 1 à mão e colocar a outra no fundo do baralho.",
+   "acoes": [
+    {
+     "a": "passive_trigger_on_substitute",
+     "effect": {
+      "a": "look_top",
+      "qty": 2,
+      "mode": "take_one_bottom_rest"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "periodo_de_seca",
+  "tipo": "fenomeno",
+  "nome": "Período de Seca",
+  "faccao": "neutro",
+  "imagem": "fenomeno_periodo_de_seca_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Sempre que um jogador quiser realizar uma Invocação, deve primeiro descartar uma carta da mão. Se não puder, não poderá invocar. (O descarte-custo não ativa o Efeito de Descarte.)",
+   "acoes": [
+    {
+     "a": "passive_invoke_cost",
+     "cost": {
+      "discard_self": 1,
+      "trigger_discard_effect": false
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "podridao",
+  "tipo": "fenomeno",
+  "nome": "Podridão",
+  "faccao": "neutro",
+  "imagem": "fenomeno_podridao_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Sempre que um jogador invocar um Vilão (carta do Caos), ele pode olhar a carta do topo do baralho. Se quiser, pode colocá-la no fundo do baralho.",
+   "acoes": [
+    {
+     "a": "passive_trigger_on_invoke",
+     "faccao": "caos",
+     "effect": {
+      "a": "look_top",
+      "qty": 1,
+      "mode": "choose_bottom_or_keep"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "primavera",
+  "tipo": "fenomeno",
+  "nome": "Primavera",
+  "faccao": "neutro",
+  "imagem": "fenomeno_primavera_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Sempre que um jogador invocar uma Ervilha, ele pode olhar a carta do topo do baralho. Se quiser, pode colocá-la no fundo do baralho.",
+   "acoes": [
+    {
+     "a": "passive_trigger_on_invoke",
+     "faccao": "ervilha",
+     "effect": {
+      "a": "look_top",
+      "qty": 1,
+      "mode": "choose_bottom_or_keep"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "id": "tempestade_de_granizo",
+  "tipo": "fenomeno",
+  "nome": "Tempestade de Granizo",
+  "faccao": "neutro",
+  "imagem": "fenomeno_tempestade_de_granizo_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Enquanto Tempestade estiver ativa, os efeitos de Invocação não são ativados.",
+   "acoes": [
+    {
+     "a": "passive_suppress_invoke_effects"
+    }
+   ]
+  }
+ },
+ {
+  "id": "eclipse",
+  "tipo": "fenomeno",
+  "nome": "Eclipse",
+  "faccao": "neutro",
+  "imagem": "eclipse_medalhao_fenomeno_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Enquanto Eclipse estiver ativo, os efeitos de Invocação das cartas de nível 0 não são ativados.",
+   "acoes": [
+    {
+     "a": "passive_suppress_invoke_effects",
+     "nivel": 0
+    }
+   ]
+  }
+ },
+ {
+  "id": "tempestade_de_polen",
+  "tipo": "fenomeno",
+  "nome": "Tempestade de Pólen",
+  "faccao": "neutro",
+  "imagem": "tempestade_de_polen_com_logo_pea_63x88mm_300dpi.png",
+  "efeito": {
+   "texto": "Quando esta carta estiver ativa, nenhum efeito de descarte poderá ser ativado.",
+   "acoes": [
+    {
+     "a": "passive_suppress_discard_effects"
+    }
+   ]
+  }
+ }
+]
